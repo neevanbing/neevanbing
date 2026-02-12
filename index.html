@@ -3,65 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neevan Bing - RAK</title>
+    <title>NEEVAN BING - RAK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
     <style>
-        /* Background and Font Settings */
         body {
             margin: 0;
             padding: 0;
-            background-color: #87CEEB; /* Sky blue */
-            font-family: 'Arial', sans-serif;
-            color: #000000; /* Black ink */
+            /* Linear gradient for a more realistic sky depth */
+            background: linear-gradient(to bottom, #87CEEB 0%, #B0E2FF 100%);
+            color: #000000;
             height: 100vh;
-            overflow: hidden;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
             text-align: center;
+            overflow: hidden;
         }
 
-        /* Heading Style */
+        /* Fancy Header Styling */
         h1 {
-            font-size: 5rem;
-            margin-top: 50px;
+            font-family: 'Playfair Display', serif;
+            font-size: 5.5rem;
+            letter-spacing: 4px;
+            margin-top: 60px;
             margin-bottom: 10px;
             z-index: 10;
+            text-transform: uppercase;
         }
 
-        /* Paragraph Style */
+        /* Sophisticated Paragraph Styling */
         p {
-            max-width: 600px;
-            font-size: 1.2rem;
-            line-height: 1.6;
+            font-family: 'Lora', serif;
+            max-width: 650px;
+            font-size: 1.3rem;
+            line-height: 1.8;
             padding: 20px;
             z-index: 10;
+            font-style: italic;
         }
 
-        /* Cloud Styling */
+        /* Realistic Cloud Styling with "Reflections" */
         .cloud {
             position: absolute;
-            width: 150px;
-            height: 50px;
-            background: #fff;
-            border-radius: 50px;
-            opacity: 0.9;
+            width: 200px;
+            height: 60px;
+            /* Radial gradient creates a soft "lit" center for realism */
+            background: radial-gradient(circle at 50% 50%, #ffffff 0%, #f0f0f0 100%);
+            border-radius: 100px;
+            /* Box shadow creates the soft "reflection" and depth */
+            box-shadow: 0 8px 32px rgba(255, 255, 255, 0.5), inset 0 -5px 15px rgba(0,0,0,0.05);
+            filter: blur(1px); /* Softens edges for realism */
+            opacity: 0.95;
         }
 
         .cloud::after, .cloud::before {
             content: '';
             position: absolute;
-            background: #fff;
+            background: inherit;
             border-radius: 50%;
         }
 
-        .cloud::after { width: 70px; height: 70px; top: -35px; left: 20px; }
-        .cloud::before { width: 50px; height: 50px; top: -20px; left: 70px; }
+        .cloud::after { width: 100px; height: 100px; top: -50px; left: 30px; }
+        .cloud::before { width: 80px; height: 80px; top: -30px; left: 90px; }
 
-        /* Cloud Positions */
-        .top-right { top: 10%; right: 10%; }
-        .bottom-right { bottom: 15%; right: 15%; }
-        .bottom-left { bottom: 15%; left: 10%; }
+        /* Positions */
+        .top-right { top: 10%; right: 8%; transform: scale(1.2); }
+        .bottom-right { bottom: 12%; right: 12%; transform: scale(0.9); }
+        .bottom-left { bottom: 15%; left: 10%; transform: scale(1.1); }
 
     </style>
 </head>
@@ -74,10 +83,10 @@
     <h1>NEEVAN BING</h1>
     
     <p>
-        Ras Al Khaimah is one of the seven emirates that make up the United Arab Emirates. 
-        Known for its stunning diverse landscapes, it features the majestic Hajar Mountains, 
-        beautiful sandy beaches, and lush mangroves. It is a place where rich history 
-        meets modern adventure, home to the highest peak in the UAE, Jebel Jais.
+        Ras Al Khaimah is a jewel of the Emirates, where the rugged peaks of the 
+        Hajar Mountains meet the serene shores of the Arabian Gulf. It is a land 
+        steeped in ancient soul, offering a breathtaking tapestry of terracotta 
+        deserts and emerald mangroves.
     </p>
 
 </body>
