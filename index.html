@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEEVAN BING</title>
+    <title>NEEVAN BING - RAK</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #87CEEB 0%, #B0E2FF 100%);
+            /* A deep sky gradient for more realism */
+            background: linear-gradient(180deg, #74b9ff 0%, #a29bfe 100%);
             color: #000000;
             height: 100vh;
             display: flex;
@@ -18,58 +19,40 @@
             justify-content: flex-start;
             text-align: center;
             overflow: hidden;
-            font-family: 'Lora', serif;
         }
 
+        /* Fancy Header */
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 5.5rem;
-            letter-spacing: 4px;
-            margin-top: 60px;
-            margin-bottom: 10px;
+            font-size: 6rem;
+            margin-top: 80px;
+            letter-spacing: 5px;
             z-index: 10;
-            text-transform: uppercase;
         }
 
+        /* Elegant Paragraph */
         p {
+            font-family: 'Lora', serif;
             max-width: 600px;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             line-height: 1.8;
-            padding: 20px;
-            z-index: 10;
             font-style: italic;
+            z-index: 10;
         }
 
-        /* The Jumpscare Button */
-        #scary-button {
-            background-color: #ff0000;
-            color: white;
-            padding: 20px 40px;
-            font-size: 1.5rem;
-            font-family: 'Playfair Display', serif;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            z-index: 20;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-            transition: transform 0.2s, background-color 0.2s;
-        }
-
-        #scary-button:hover {
-            background-color: #cc0000;
-            transform: scale(1.1);
-        }
-
-        /* Realistic Clouds */
+        /* Realistic Cloud Styling */
         .cloud {
             position: absolute;
-            width: 200px;
-            height: 60px;
-            background: radial-gradient(circle at 50% 50%, #ffffff 0%, #f0f0f0 100%);
+            width: 250px;
+            height: 80px;
+            /* Radial gradient creates a "lit" look from the sun */
+            background: radial-gradient(circle at 50% 10%, #ffffff 0%, #f1f1f1 100%);
             border-radius: 100px;
-            box-shadow: 0 8px 32px rgba(255, 255, 255, 0.5), inset 0 -5px 15px rgba(0,0,0,0.05);
-            filter: blur(1px);
-            opacity: 0.95;
+            /* Blur creates the "gaseous" look */
+            filter: blur(2px);
+            opacity: 0.9;
+            /* box-shadow adds the "reflection" glow around the edges */
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
         }
 
         .cloud::after, .cloud::before {
@@ -79,28 +62,14 @@
             border-radius: 50%;
         }
 
-        .cloud::after { width: 100px; height: 100px; top: -50px; left: 30px; }
-        .cloud::before { width: 80px; height: 80px; top: -30px; left: 90px; }
+        .cloud::after { width: 120px; height: 120px; top: -60px; left: 30px; }
+        .cloud::before { width: 100px; height: 100px; top: -40px; left: 100px; }
 
-        .top-right { top: 10%; right: 8%; transform: scale(1.2); }
-        .bottom-right { bottom: 12%; right: 12%; transform: scale(0.9); }
-        .bottom-left { bottom: 15%; left: 10%; transform: scale(1.1); }
+        /* Positions */
+        .top-right { top: 10%; right: 5%; transform: scale(1.3); }
+        .bottom-right { bottom: 15%; right: 10%; transform: scale(0.8); }
+        .bottom-left { bottom: 15%; left: 8%; transform: scale(1.1); }
 
-        /* The Jumpscare Overlay */
-        #jumpscare-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: black;
-            /* UPDATED FILE NAME BELOW */
-            background-image: url('jumpscare.jpg.jpeg'); 
-            background-size: cover;
-            background-position: center;
-            z-index: 9999;
-        }
     </style>
 </head>
 <body>
@@ -111,31 +80,12 @@
 
     <h1>NEEVAN BING</h1>
     
-    <p>Welcome to my corner of the internet. A place of peace, clouds, and absolute tranquility. Nothing unexpected happens here...</p>
-
-    <button id="scary-button" onclick="triggerJumpscare()">JUMPSCARE!</button>
-
-    <div id="jumpscare-overlay"></div>
-
-    <audio id="scream-sound">
-        <source src="https://www.myinstants.com/media/sounds/scary-scream.mp3" type="audio/mpeg">
-    </audio>
-
-    <script>
-        function triggerJumpscare() {
-            // Show the image
-            document.getElementById('jumpscare-overlay').style.display = 'block';
-            
-            // Play the sound
-            var audio = document.getElementById('scream-sound');
-            audio.play();
-
-            // Hide it after 3 seconds so they can see the site again
-            setTimeout(function() {
-                document.getElementById('jumpscare-overlay').style.display = 'none';
-            }, 3000);
-        }
-    </script>
+    <p>
+        Ras Al Khaimah is a jewel of the Emirates, where the rugged peaks of the 
+        Hajar Mountains meet the serene shores of the Arabian Gulf. It is a land 
+        steeped in ancient soul, offering a breathtaking tapestry of terracotta 
+        deserts and emerald mangroves.
+    </p>
 
 </body>
 </html>
